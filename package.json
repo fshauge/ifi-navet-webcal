@@ -1,0 +1,29 @@
+{
+  "name": "ifi-navet-webcal",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "fshauge",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fshauge/ifi-navet-webcal.git"
+  },
+  "homepage": "https://github.com/fshauge/ifi-navet-webcal#readme",
+  "bugs": {
+    "url": "https://github.com/fshauge/ifi-navet-webcal/issues"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "ical-generator": "^1.1.1",
+    "moment": "^2.22.2",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
