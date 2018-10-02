@@ -8,13 +8,14 @@ const router = new express.Router();
 const api = new Api(API_URL);
 
 const createEvent = event => {
-  const { title: summary, teaser: description, date } = event;
+  const { title, teaser, companyName, date } = event;
   const start = moment(date, 'DD.MM.YYYY HH:mm');
   const end = start.clone().add(1, 'h');
 
   return {
-    summary,
-    description,
+    summary: title,
+    description: teaser,
+    location: companyName,
     start,
     end
   };
