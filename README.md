@@ -6,8 +6,6 @@ Provides a webcal interface for Navet events.
 
 Log in to ifinavet.no and grab the cookie. Use the right side of the PLAY_SESSION cookie (PLAY_SESSION="...") to subscribe to the calendar:
 
-or
-
 ```
 webcal://ifi-navet-webcal.herokuapp.com/?token=...
 ```
