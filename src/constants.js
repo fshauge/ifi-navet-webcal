@@ -1,6 +1,6 @@
 module.exports = {
   API_URL: 'https://ifinavet.no/api',
-  CALENDAR: {
+  CALENDAR_BASE: {
     name: 'Navet',
     domain: 'https://ifinavet.no/',
     prodId: {

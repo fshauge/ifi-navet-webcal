@@ -2,7 +2,7 @@ const express = require('express');
 const ical = require('ical-generator');
 const moment = require('moment');
 const Api = require('./Api');
-const { API_URL, CALENDAR } = require('./constants');
+const { API_URL, CALENDAR_BASE } = require('./constants');
 
 const router = new express.Router();
 const api = new Api(API_URL);
@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
   const { events } = await api.getEvents(req.query.token);
 
   const calendar = ical({
-    ...CALENDAR,
+    ...CALENDAR_BASE,
     events: events && events.map(createEvent)
   });
 
