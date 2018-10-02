@@ -22,8 +22,8 @@ const createEvent = event => {
   };
 };
 
-router.get('/:token', async (req, res) => {
-  const { events } = await api.getEvents(req.params.token);
+router.get('/', async (req, res) => {
+  const { events } = await api.getEvents(req.query.token);
 
   const calendar = ical({
     ...CALENDAR,
