@@ -15,3 +15,10 @@ Log in to ifinavet.no and grab the cookie. Use the right side of the PLAY_SESSIO
 ```
 webcal://localhost:3000/?token=...
 ```
+
+## Progress
+
+- [x] Create the Express server
+- [x] Connect to the API
+- [x] Generate the webcal
+- [ ] Deploy to Heroku
