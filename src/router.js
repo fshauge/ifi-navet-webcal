@@ -24,14 +24,19 @@ const createEvent = event => {
 };
 
 router.get('/', async (req, res) => {
-  const { events } = await api.getEvents(req.query.token);
+  try {
+    const result = await api.getEvents(req.query.token);
 
-  const calendar = ical({
-    ...CALENDAR_BASE,
-    events: events && events.map(createEvent)
-  });
+    const calendar = ical({
+      ...CALENDAR_BASE,
+      events: result.events && result.events.map(createEvent)
+    });
 
-  res.end(calendar.toString());
+    res.end(calendar.toString());
+  } catch ({ statusCode, body }) {
+    res.status(statusCode);
+    res.end(body);
+  }
 });
 
 module.exports = router;

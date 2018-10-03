@@ -10,9 +10,11 @@ class Api {
       request(
         this.baseUrl + endpoint,
         options,
-        (err, res, body) => {
+        (err, { statusCode }, body) => {
           if (err) {
-            reject(err);
+            reject({ statusCode: 500, body: err });
+          } else if (statusCode != 200) {
+            reject({ statusCode, body });
           } else {
             resolve(body);
           }
