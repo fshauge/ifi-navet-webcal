@@ -5,14 +5,14 @@
   "keywords": [],
   "author": "fshauge",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "engines": {
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "node src/index.js",
-    "watch": "nodemon src/index.js",
-    "lint": "eslint src"
+    "start": "node lib/index.js",
+    "watch": "nodemon --inspect lib/index.js",
+    "lint": "eslint lib"
   },
   "repository": {
     "type": "git",
