@@ -12,13 +12,15 @@ const createEvent = event => {
   const description = (teaser && teaser + '\n\n') + `https://ifinavet.no/event/${id}`;
   const start = moment(date, 'DD.MM.YYYY HH:mm');
   const end = start.clone().add(1, 'h');
+  const uid = `${id}@https://ifinavet.no/`;
 
   return {
     summary: title,
     location: companyName,
     description,
     start,
-    end
+    end,
+    uid
   };
 };
 
