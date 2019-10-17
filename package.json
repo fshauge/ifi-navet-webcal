@@ -5,31 +5,20 @@
   "keywords": [],
   "author": "fshauge",
   "license": "MIT",
-  "main": "lib/index.js",
   "engines": {
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "node lib/index.js",
-    "watch": "nodemon --inspect lib/index.js",
-    "lint": "eslint lib"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fshauge/ifi-navet-webcal.git"
-  },
-  "homepage": "https://github.com/fshauge/ifi-navet-webcal#readme",
-  "bugs": {
-    "url": "https://github.com/fshauge/ifi-navet-webcal/issues"
+    "start": "now dev"
   },
   "dependencies": {
-    "express": "^4.16.3",
     "ical-generator": "^1.1.1",
     "moment": "^2.22.2",
     "request": "^2.88.0"
   },
   "devDependencies": {
     "eslint": "^5.6.1",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "now": "^16.3.1"
   }
 }
